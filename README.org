@@ -1,2 +1,7 @@
 * MPI for embarrassingly parallel tasks
 MPIをサンプル並列（所謂、馬鹿パラ）のためだけに使えるようになりたい人向け。
+
+** 参考資料
+- 使用する計算機クラスタやスパコンのマニュアル（ジョブスクリプトの書き方）
+- 渡辺宙志先生の資料：https://github.com/kaityo256/sevendayshpc
+- 私の殴り書きメモ（古い）：https://gist.github.com/kumpeishiraishi/6d2fcc6da0ebcdc23c0ef301063ae8a5
