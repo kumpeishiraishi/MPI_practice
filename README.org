@@ -1,0 +1,2 @@
+* MPI for embarrassingly parallel tasks
+MPIをサンプル並列（所謂、馬鹿パラ）のためだけに使えるようになりたい人向け。
