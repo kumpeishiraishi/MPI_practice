@@ -9,6 +9,7 @@
 #include <cmath>
 #include <string>
 #include <vector>
+#include <sstream>
 #include "cnpy.h"
 #include <mpi.h>
 //---------------------------------------------------------------
@@ -394,7 +395,9 @@ int main(int argc, char** argv) {
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
-    std::string name = std::to_string(rank)+".npz";
+    std::stringstream ss;
+    ss << std::setfill('0') << std::right << std::setw(3) << rank;
+    std::string name = ss.str()+".npz";
     cnpy::NpyArray arr2 = cnpy::npz_load(name, "position");
     std::vector<double> conf2(arr2.data<double>(), arr2.data<double>() + Ndof);
     std::copy(conf2.begin(), conf2.end(), *conf);
