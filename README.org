@@ -1,6 +1,16 @@
 * MPI for embarrassingly parallel tasks
 MPIをサンプル並列（所謂、馬鹿パラ）のためだけに使えるようになりたい人向け。
 
+** 出てくること
+- =MPI_Init=
+- =MPI_Barrier=
+- =MPI_Finalize=
+
+** 出てこないけれどガラスの数値計算で使いそうなこと
+- =MPI_Gather=
+- =MPI_Reduce=
+- =MPI_Bcast=
+
 ** 参考資料
 - 使用する計算機クラスタやスパコンのマニュアル（ジョブスクリプトの書き方）
 - 渡辺宙志先生の資料：https://github.com/kaityo256/sevendayshpc
