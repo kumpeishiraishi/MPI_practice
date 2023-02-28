@@ -364,7 +364,7 @@ void NVT(const double T_targ, const double tsim) {
         double uk = std::inner_product(*velo, *velo+Ndof, *velo, 0.0);
         vxi1 += dt4 * (uk - gkBT);
         double temp = std::exp(-vxi1 * dt2);
-        std::transform(*velo, *velo+Ndof+N, *velo,
+        std::transform(*velo, *velo+Ndof, *velo,
                        std::bind(std::multiplies<double>(), std::placeholders::_1, temp));
         vxi1 += dt4 * (uk*temp*temp - gkBT);
 
@@ -379,7 +379,7 @@ void NVT(const double T_targ, const double tsim) {
         uk    = std::inner_product(*velo, *velo+Ndof, *velo, 0.0);
         vxi1 += dt4 * (uk - gkBT);
         temp  = std::exp(-vxi1 * dt2);
-        std::transform(*velo, *velo+Ndof+N, *velo,
+        std::transform(*velo, *velo+Ndof, *velo,
                        std::bind(std::multiplies<double>(), std::placeholders::_1, temp));
         vxi1 += dt4 * (uk*temp*temp - gkBT);
 
